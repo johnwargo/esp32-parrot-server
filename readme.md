@@ -6,6 +6,8 @@ A simple web server sketch for ESP32 devices that returns an HTTP 200 response c
 
 While working on an application for a Wi-Fi enabled device, I realized I needed a server for the application to connect to as I tested the device. I didn't have the target hardware lying around that I needed, so I decided to create this sketch to allow me to test the app's connectivity while I waited for the final hardware.
 
+Why did I create it? Most any other server process I created would require TLS (HTTPS) to connect to it. I needed something I could connect to from a local IoT device (an Arduino, Raspberry Pi, etc.).
+
 ## Configuring the Sketch
 
 Copy the repositories `config.h.rename` file to `config.h`. This file contains the configuration settings for the sketch. By separating the configuration values into an external file that's not part of the repository, I can publish updates to the sketch and you'll be able to download them without overriding the configuration settings with the default values from the repository.
@@ -50,3 +52,19 @@ Web server: Request: /someRequest
 ```
 
 When the server receives any network request, it responds with a 200 response code (HTTP OK) and a string value summarizing the request (request `uri`, request parameters, HTTP Method, etc.).
+
+The response message from the server looks like this:
+
+```text
+URI: /someRequest
+Method: GET
+Arguments: 0
+```
+
+If the request contains query string paramaters, you'll find each of those arguments in the response as well.
+
+***
+
+If this code helps you, please consider buying me a coffee.
+
+<a href="https://www.buymeacoffee.com/johnwargo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
