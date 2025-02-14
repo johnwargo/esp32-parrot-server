@@ -20,9 +20,10 @@ Modify the contents of the configuration file for your particular needs:
 ```
 
 | Config Setting | Description |
-| -------------- |  |
-| -------------- |  |
-| -------------- |  |
+| -------------- | ----------- |
+| `WIFI_SSID`    | The Wi-Fi network name (SSID) you want the sketch to connect to. |
+| `WIFI_PASSWORD | The password for the Wi-Fi network SSID specified in `WIFI_SSID` |
+| `HOSTNAME      | The network name for the ESP32 Parrot server.  |
 
 ## Operation
 
