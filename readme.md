@@ -6,7 +6,7 @@ A simple web server sketch for ESP32 devices that returns an HTTP 200 response c
 
 While working on an application for a Wi-Fi enabled device, I realized I needed a server for the application to connect to as I tested the device. I didn't have the target hardware lying around that I needed, so I decided to create this sketch to allow me to test the app's connectivity while I waited for the final hardware.
 
-Why did I create it? Most any other server process I created would require TLS (HTTPS) to connect to it. I needed something I could connect to from a local IoT device (an Arduino, Raspberry Pi, etc.).
+Why did I create it? Most any other server process I created would require TLS (HTTPS) to connect to it. I needed something I could connect to from a local IoT device (an Arduino, Raspberry Pi, etc.) over HTTP. Building my own local server that runs on a $5US microcontroller seemed like a good way to do it.
 
 ## Configuring the Sketch
 
