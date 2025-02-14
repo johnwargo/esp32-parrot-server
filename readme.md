@@ -27,8 +27,11 @@ Modify the contents of the configuration file for your particular needs:
 
 ## Operation
 
-To use the server, configure 
+Compile and deploy the sketch to an ESP32 device. When the sketch starts, it:
 
+1. Connects to the Wi-Fi network specified in the configuration file.
+2. Sets the network name for the server to the value assigned to the `HOSTNAME` configuration setting
+3. Starts listening for requests on port 80.
 
 ```text
 ***********************
@@ -45,3 +48,5 @@ Web server: MDNS responder started
 Web server: HTTP server started
 Web server: Request: /someRequest
 ```
+
+When the server receives any network request, it responds with a 200 response code (HTTP OK) and a string value summarizing the request (request `uri`, request parameters, HTTP Method, etc.).
