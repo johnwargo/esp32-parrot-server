@@ -20,9 +20,6 @@ WebServer server(80);
 const char* ssid = WIFI_SSID;
 const char* password = WIFI_PASSWORD;
 
-TaskHandle_t Task0;
-TaskHandle_t Task1;
-
 void setup() {
 
   int counter = 0;
