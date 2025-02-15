@@ -61,7 +61,7 @@ Method: GET
 Arguments: 0
 ```
 
-If the request contains query string paramaters, you'll find each of those arguments in the response as well.
+If the request contains query string parameters, you'll find each of those arguments in the response as well.
 
 ***
 
